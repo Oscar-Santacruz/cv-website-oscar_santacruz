@@ -1,288 +1,115 @@
-<!DOCTYPE HTML>
-<!--
-	Overflow by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Overflow by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="es">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<h1>Hola. Soy Oscar!</h1>
-					<p>Desarrollador de Software</p>
-					<p>Diseñador Grafico</p>
-					<p>Ayudando a la gente a devolverle el tiempo</p>
-				</header>
-				<footer>
-					<a href="#banner" class="button style2 scrolly-middle">conoceme mas!</a>
-				</footer>
-			</section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Santacruz | Professional Wallet</title>
+    <link rel="stylesheet" href="assets/css/v3_fintech.css">
+</head>
 
-		<!-- Banner -->
-			<section id="banner">
-				<header>
-					<h2>This is Overflow</h2>
-				</header>
-				<p>Soy desarrollador .net actualmente trabajo en el 
-					<a href="https://www.bancontinental.com.py/">banco continental</a> con sede en Asunción, Paraguay. <br />
-				Clientes externos, internos e internacionales con implementaciones con visa / mastercard <br />
-				De manera independiente: trabajo realizando sitios web para empresas, startups e individuos para crear un plan de negocio digital</p><br />
-				Además, en mi tiempo libre hago diseños en coreldraw y algunos proyectos con arduino.
-				<footer>
-					<a href="#first" class="button style2 scrolly">Portafolio de trabajo</a>
-				</footer>
-			</section>
+<body>
 
-		<!-- Feature 1 -->
-			<article id="first" class="container box style1 right">
-				<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
-				<div class="inner">
-					<header>
-						<h2>Tech Lead Tarjetas<br />
-						Transformacion Digital - Banco Continental</h2>
-					</header>
-					<p>liderando proyectos en la transformacion digital del banco continental 
-					en varias iniciativas en implementaciones que requieran integracion 
-					con empresas externas utilizando tecnologias soap, rest, ftp y sftp.</p>
-				</div>
-			</article>
+    <!-- Ambient Background -->
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
 
-		<!-- Feature 2 -->
-			<article class="container box style1 left">
-				<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-				<div class="inner">
-					<header>
-						<h2>Tech Lead Contact Center<br />
-						</h2>
-					</header>
-					<p>Implementando servicios de respuestas de voz interactiva (IVR) con servicios integrados al core bancario con tecnologias de cisco, centralizando el contacto de cliente por distintos cancales y automatizando las respuestas con bot´s </p>
-				</div>
-			</article>
+    <!-- Login Screen (Face ID Simulation) -->
+    <div id="login-screen">
+        <div class="scanner-container">
+            <div class="face-outline">
+                <div class="scan-line"></div>
+            </div>
+        </div>
+        <div class="status-text">ESPERANDO ROSTRO...</div>
+    </div>
 
-		<!-- Portfolio -->
-			<article class="container box style2">
-				<header>
-					<h2>Desarrollo de software Integral</h2>
-					<p>Trabajando con varias tecnologias<br />
-					</p>
-				</header>
-				<div class="inner gallery">
-					<div class="row gtr-0">
-						<div class="col-3 col-12-mobile"><a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" alt="" title="Ad infinitum" /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" alt="" title="Dressed in Clarity" /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" alt="" title="Raven" /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" alt="" title="I'll have a cup of Disneyland, please" /></a></div>
-					</div>
-					<div class="row gtr-0">
-						<div class="col-3 col-12-mobile"><a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" alt="" title="Cherish" /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" alt="" title="Different." /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/07.jpg" class="image fit"><img src="images/thumbs/07.jpg" alt="" title="History was made here" /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/08.jpg" class="image fit"><img src="images/thumbs/08.jpg" alt="" title="People come and go and walk away" /></a></div>
-					</div>
-				</div>
-			</article>
+    <!-- Main App Container -->
+    <div id="app-container" class="glass-panel">
 
-		<!-- Contact -->
-			<article class="container box style3">
-				<header>
-					<h2>Trabajemos!!</h2>
-					<p>Contacto para consultas sobre disponibilidad.</p>
-				</header>
-				<form method="post" action="#">
-					<div class="row gtr-50">
-						<div class="col-6 col-12-mobile"><input type="text" class="text" name="name" placeholder="Nombre/Empresa" /></div>
-						<div class="col-6 col-12-mobile"><input type="text" class="text" name="email" placeholder="Email" /></div>
-						<div class="col-12">
-							<textarea name="message" placeholder="mensaje o motivo de contacto."></textarea>
-						</div>
-						<div class="col-12">
-							<ul class="actions">
-								<li><input type="submit" value="Enviar" /></li>
-							</ul>
-						</div>
-					</div>
-				</form>
-			</article>
+        <!-- Sidebar -->
+        <aside>
+            <div class="profile-summary">
+                <div class="avatar">OS</div>
+                <div>
+                    <h3>Oscar Santacruz</h3>
+                    <!-- JS will inject phone/email here -->
+                </div>
+            </div>
 
-		<!-- Generic -->
-		<!--
-			<article class="container box style3">
-				<header>
-					<h2>Generic Box</h2>
-					<p>Just a generic box. Nothing to see here.</p>
-				</header>
-				<section>
-					<header>
-						<h3>Paragraph</h3>
-						<p>This is a subtitle</p>
-					</header>
-					<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
-					habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
-					leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
-					amet risus elit.</p>
-				</section>
-				<section>
-					<header>
-						<h3>Blockquote</h3>
-					</header>
-					<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-					tempus euismod. Vestibulum ante ipsum primis in faucibus.</blockquote>
-				</section>
-				<section>
-					<header>
-						<h3>Divider</h3>
-					</header>
-					<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
-					ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-					facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-					tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-					posuere cubilia.</p>
-					<hr />
-					<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-					ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-					facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-					tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-					posuere cubilia.</p>
-				</section>
-				<section>
-					<header>
-						<h3>Unordered List</h3>
-					</header>
-					<ul>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-					</ul>
-				</section>
-				<section>
-					<header>
-						<h3>Ordered List</h3>
-					</header>
-					<ol>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-					</ol>
-				</section>
-				<section>
-					<header>
-						<h3>Table</h3>
-					</header>
-					<div class="table-wrapper">
-						<table>
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>45815</td>
-									<td>Something</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>24524</td>
-									<td>Nothing</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>45815</td>
-									<td>Something</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>24524</td>
-									<td>Nothing</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>19.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="3"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</section>
-				<section>
-					<header>
-						<h3>Form</h3>
-					</header>
-					<form method="post" action="#">
-						<div class="row">
-							<div class="col-6 col-12-mobile">
-								<input class="text" type="text" name="name" id="name" value="" placeholder="John Doe" />
-							</div>
-							<div class="col-6 col-12-mobile">
-								<input class="text" type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
-							</div>
-							<div class="col-12">
-								<select name="department" id="department">
-									<option value="">Choose a department</option>
-									<option value="1">Manufacturing</option>
-									<option value="2">Administration</option>
-									<option value="3">Support</option>
-								</select>
-							</div>
-							<div class="col-12">
-								<input class="text" type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
-							</div>
-							<div class="col-12">
-								<textarea name="message" id="message" placeholder="Enter your message"></textarea>
-							</div>
-							<div class="col-12">
-								<ul class="actions">
-									<li><input type="submit" value="Submit" /></li>
-									<li><input type="reset" class="style3" value="Clear Form" /></li>
-								</ul>
-							</div>
-						</div>
-					</form>
-				</section>
-			</article>
-		-->
+            <nav class="nav-menu">
+                <button id="btn-dashboard" class="active" onclick="switchTab('dashboard')">
+                    <span>📊</span> Resumen General
+                </button>
+                <button id="btn-cards" onclick="switchTab('cards')">
+                    <span>💳</span> Mis Tarjetas (Skills)
+                </button>
+                <button id="btn-history" onclick="switchTab('history')">
+                    <span>🕒</span> Historial (Exp)
+                </button>
+            </nav>
 
-		<section id="footer">
-			<ul class="icons">
-				<li><a href="https://twitter.com/OscarWSG" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="https://www.facebook.com/oskarwsantacruz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="https://www.linkedin.com/in/oscar-santacruz-ba233293/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-			</ul>
-			<div class="copyright">
-				<ul class="menu">
-					<li>&copy; OscarWSantacruz. All rights reserved.</li>
-				</ul>
-			</div>
-		</section>
+            <div style="text-align: center; opacity: 0.5; font-size: 0.8rem;">
+                v3.0.0 FINTECH EDITION
+            </div>
+        </aside>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <!-- Main Content -->
+        <main>
 
-	</body>
+            <!-- Header -->
+            <div class="section-header">
+                <div>
+                    <p>Balance Total (Experiencia)</p>
+                    <h1>10+ AÑOS</h1>
+                    <!-- JS will inject summary here -->
+                </div>
+            </div>
+
+            <!-- Cards Section -->
+            <section id="cards-section" style="margin-bottom: 40px;">
+                <div class="section-header">
+                    <h2>Mis Tarjetas</h2>
+                    <p>Tecnologías Activas</p>
+                </div>
+                <div id="cards-container" class="cards-grid">
+                    <!-- Injected by JS -->
+                </div>
+            </section>
+
+            <!-- Transactions Section -->
+            <section id="history-section">
+                <div class="section-header">
+                    <h2>Movimientos Recientes</h2>
+                    <p>Historial Laboral</p>
+                </div>
+                <div id="transactions-container">
+                    <!-- Injected by JS -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Holographic Modal -->
+    <div id="modal-overlay">
+        <div id="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h2>Role Title</h2>
+                    <div class="modal-subtitle">Company • Date</div>
+                </div>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <!-- Tasks injected by JS -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/v3_fintech.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,261 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden; /* Prevent scrollbars on main body, terminal handles it */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00;
+}
+
+/* CRT Effects */
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0) 50%,
+        rgba(0,0,0,0.2) 50%,
+        rgba(0,0,0,0.2)
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.flicker {
+    animation: flicker 0.15s infinite;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 0, 0.02);
+    z-index: 99;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.9; }
+    50% { opacity: 1.0; }
+    100% { opacity: 0.9; }
+}
+
+/* Background Animations Container */
+#bg-animations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.15; /* Subtle background */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Floating Objects */
+.bg-obj {
+    position: absolute;
+    border: 1px solid #00FF00;
+    box-shadow: 0 0 5px #00FF00;
+}
+
+/* ATM Wireframe */
+.obj-atm {
+    top: 10%;
+    left: 5%;
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+    animation: float 6s ease-in-out infinite;
+}
+.obj-atm::before {
+    content: 'ATM';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+}
+.obj-atm::after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    width: 80px;
+    height: 2px;
+    background: #00FF00;
+    box-shadow: 0 0 5px #00FF00;
+}
+
+/* Card Wireframe */
+.obj-card {
+    top: 20%;
+    right: 10%;
+    width: 120px;
+    height: 70px;
+    border-radius: 8px;
+    animation: rotate3d 8s linear infinite;
+}
+.obj-card::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 30px;
+    height: 20px;
+    border: 1px solid #00FF00; /* Chip */
+}
+
+/* Robot/Face Scan */
+.obj-scan {
+    bottom: 10%;
+    left: 15%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px dashed #00FF00;
+    animation: pulse 3s infinite;
+}
+.obj-scan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #00FF00;
+    animation: scan 2s linear infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+@keyframes rotate3d {
+    0% { transform: rotateY(0deg) rotateX(10deg); }
+    100% { transform: rotateY(360deg) rotateX(10deg); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+@keyframes scan {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+/* Terminal Layout */
+#terminal {
+    position: relative;
+    z-index: 10;
+    width: 95%;
+    max-width: 1024px;
+    height: 90vh;
+    border: 2px solid #00FF00;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
+    gap: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px double #00FF00;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Main Content Area */
+#screen-content {
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Scrollbar styling */
+#screen-content::-webkit-scrollbar {
+    width: 10px;
+}
+#screen-content::-webkit-scrollbar-track {
+    background: #000;
+    border: 1px solid #00FF00;
+}
+#screen-content::-webkit-scrollbar-thumb {
+    background: #00FF00;
+}
+
+/* Footer */
+footer {
+    border-top: 1px double #00FF00;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+}
+
+/* Typography & Components */
+h1, h2, h3 {
+    margin: 0 0 15px 0;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.menu-item {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: #00FF00;
+    color: #000;
+    text-shadow: none;
+}
+
+.input-line {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2em;
+    background-color: #00FF00;
+    animation: blink 1s step-end infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.hidden { display: none; }
+.blink-text { animation: blink 1s step-end infinite; }

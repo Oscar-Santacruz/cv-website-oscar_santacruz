@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA CENTRAL - OSCAR SANTACRUZ</title>
+    <link rel="stylesheet" href="assets/css/as400.css">
+</head>
+
+<body>
+
+    <!-- CRT Overlay Effects -->
+    <div class="scanlines"></div>
+    <div class="flicker"></div>
+
+    <!-- Background Animations -->
+    <div id="bg-animations">
+        <div class="bg-obj obj-atm"></div>
+        <div class="bg-obj obj-card"></div>
+        <div class="bg-obj obj-scan"></div>
+        <!-- PC/Terminal Icon -->
+        <div class="bg-obj"
+            style="top: 50%; left: 80%; width: 80px; height: 60px; border-radius: 5px; animation: float 5s infinite;">
+            <div
+                style="position: absolute; bottom: -20px; left: 10px; width: 60px; height: 10px; border: 1px solid #00FF00;">
+            </div>
+        </div>
+        <!-- Robot Icon -->
+        <div class="bg-obj"
+            style="top: 70%; right: 20%; width: 40px; height: 40px; border-radius: 5px; animation: pulse 2s infinite;">
+            <div style="position: absolute; top: 10px; left: 5px; width: 10px; height: 10px; background: #00FF00;">
+            </div>
+            <div style="position: absolute; top: 10px; right: 5px; width: 10px; height: 10px; background: #00FF00;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Terminal Container -->
+    <div id="terminal">
+        <header>
+            <div>SISTEMA CENTRAL DE PROCESAMIENTO</div>
+            <div id="datetime">--/--/---- --:--:--</div>
+            <div>TERM01</div>
+        </header>
+
+        <div id="screen-content">
+            <!-- Content injected by JS -->
+        </div>
+
+        <footer>
+            <div>F3=SALIR</div>
+            <div>F12=AYUDA</div>
+            <div>MODULO: RRHH</div>
+        </footer>
+    </div>
+
+    <script src="assets/js/as400.js"></script>
+</body>
+
+</html>
